@@ -1,0 +1,56 @@
+
+body {
+    height: 100vh;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    background: #022B5C;
+}
+.clocktimer{
+    color: #BC0000;
+    font-family: "Orbitron";
+    width: 340px;
+    padding: 15px 10px;
+    border: 3px solid #000;
+    border-radius: 5px;
+
+}
+
+.clocktimer:hover { /* the light effect when you hover over clock */
+    background: #00B7F4;
+    box-shadow: 0 0 30px #00B7F4;
+}
+
+.date {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.timer {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+
+}
+
+.actualtime {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actualtime span:not(:last-child) {
+    position: relative;
+    margin: 0 6px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+

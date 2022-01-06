@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Orbitron#standard-styles">
+    <link rel="stylesheet" href="style.css">
     <title>Digital Clock</title>
 </head>
 <body>
+<!--
     <div class="container">
         <h1>digital clock</h1>
         <input type="text" id="clock-display" onload="showTime()">
@@ -18,6 +21,33 @@
         <input type="submit" value="Timer" id="timer-btn">
         <input type="submit" value="Start" id="start-btn">
     </div>
+-->
+<!--Digital clock start-->
+    <div class="clocktimer">
+        <div class="date"> <!--date starting with the day of the week, the month, the day and year-->
+            <span id="weekday">Day</span>,
+            <span id="month">January</span>
+            <span id="day">00</span>,
+            <span id="year">2022</span>
+        </div>
+
+        <div class="timer"> <!--timer starting with hour, minutes and seconds-->
+            <span id="t-hour">00h</span>:
+            <span id="t-minute">00m</span>:
+            <span id="t-seconds">00s</span>
+        </div>
+
+        <div class="actualtime"> <!--clock time starting with the hour, minutes and time period-->
+            <span id="hour">00</span> :
+            <span id="minute">00</span>
+            <span id="AM/PM">PM</span>
+        </div>
+        <!--clock buttons for clock, timer and start-->
+        <input type="submit" value="Clock" id="clock-btn">
+        <input type="submit" value="Timer" id="timer-btn">
+        <input type="submit" value="Start" id="start-btn">
+    </div>
+<!--Digital clock end-->
     <script src="app.js"></script>
 </body>
 
