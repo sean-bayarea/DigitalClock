@@ -6,6 +6,7 @@ const clock=document.querySelector('.clocktimer'),
       timer_m=document.querySelector('#t-minute'),
       timer_h=document.querySelector('#t-hour'),
       timer_s=document.querySelector('#t-seconds'),
+      day_weekday=document.querySelector('#weekday'),
       day_month=document.querySelector('#month'),
       day_day=document.querySelector('#day'),
       day_year=document.querySelector('#year');
@@ -45,6 +46,7 @@ clockBtn.addEventListener('click',function(e){
 // })
 
 // Combine the start and stop button into one button
+
 startBtn.addEventListener('click',function(e){
     
     if (stopTimer) // when timer is stopped
@@ -65,7 +67,6 @@ startBtn.addEventListener('click',function(e){
 
     }
 
-    
     // for (let i=0; i<1000; i++)
     // {
     //     setTimeout(()=>showTimer(i), 1000*i);
@@ -111,13 +112,17 @@ function showTime(){
     let s = date.getSeconds(); // 0 - 59
 
     // console.log('hour='+h+",minute="+m+",second="+s);
+    let weekday=date.getDay();
     let year=date.getFullYear();
     let month=date.getMonth();
     let date1=date.getDate();
 
+    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", 
+    "Friday", "Saturday"];
+    let weekDayName = weekdays[weekday];
+
     var months = [ "January", "February", "March", "April", "May", "June", 
            "July", "August", "September", "October", "November", "December" ];
-
     let selectedMonthName = months[month];
     // console.log('year='+year+",month="+selectedMonthName+",day="+date1);
     let session = "AM";
@@ -139,6 +144,7 @@ function showTime(){
     clock_h.innerText=h;
     clock_s.innerText=s;
     clock_session.innerText=session;
+    day_weekday.innerText=weekDayName
     day_month.innerText=selectedMonthName;
     day_year.innerText=year;
     day_day.innerText=date1;
