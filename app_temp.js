@@ -7,11 +7,12 @@ class Clock {
       this.date=date;
       this.month=month;
       this.year=year; 
-
+    //   this.showTime();
     }
 
     showTime(){
 
+        var self=this;
         let date=new Date();
         let h = date.getHours(); // 0 - 23
         let m = date.getMinutes(); // 0 - 59
@@ -53,7 +54,7 @@ class Clock {
         this.session=session;
     
         console.log("clock_s="+s);
-        setTimeout(this.showTime, 1000);
+        //setTimeout(self.showTime, 1000);
     }
 
 
@@ -89,25 +90,37 @@ let stopTimer=true; // initial condition timer is stopped
 
 
 // listen to Click clock
-clockBtn.addEventListener('click',function(e){
-    // Instantiate Clock
-    const clock = new Clock(2022, "Jan", 15, 0,0,0,"AM");
+function displayClock(clock)
+{
+    // console.log("i="+i);
     clock.showTime();
     day_month.innerText=clock.month;
     day_year.innerText=clock.year;
     day_day.innerText=clock.date;
-    
+            
     clock_m.innerText=clock.minute;
     clock_h.innerText=clock.hour;
     clock_s.innerText=clock.second;
     clock_session.innerText=clock.session;
+}
 
-    // for (let i=0; i<1000; i++)
+clockBtn.addEventListener('click',function(e){
+    // Instantiate Clock
+    const clock = new Clock(2022, "Jan", 15, 0,0,0,"AM");
+
+
+    // learned from the following webpage
+    //https://stackoverflow.com/questions/28155376/get-settimeout-to-finish-before-continuing-loop
+
+    setInterval(()=>displayClock(clock), 1000);
+
+    // // another way to do it, but only limited to 100 times.
+    // while (i<100)
     // {
-    //     setTimeout(()=>clock.showTime(), 1000*i);
-
+    //     i++;
+    //     console.log("inloop, i="+i);  
+    //     setTimeout(()=>displayClock(clock,i), 1000*i);
     // }
-  
 
 })
 
