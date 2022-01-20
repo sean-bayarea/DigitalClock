@@ -27,7 +27,7 @@ class Clock {
 
         var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", 
     "Friday", "Saturday"];
-        
+
         let weekDayName = weekdays[weekday];
     
         var months = [ "January", "February", "March", "April", "May", "June", 

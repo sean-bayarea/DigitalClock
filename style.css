@@ -53,4 +53,8 @@ body {
     letter-spacing: 3px;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+}
 
