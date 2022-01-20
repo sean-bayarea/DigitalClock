@@ -8,8 +8,8 @@ body {
 }
 .clocktimer{
     color: #BC0000;
-    font-family: "Orbitron";
-    width: 340px;
+    font-family: 'Orbitron', sans-serif;
+    width: 500px;
     padding: 15px 10px;
     border: 3px solid #000;
     border-radius: 5px;
